@@ -1,0 +1,128 @@
+body{
+margin:0;
+font-family:poppins;
+overflow-x:hidden;
+color:white;
+background:black;
+}
+
+/* STAR BACKGROUND */
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+background:black;
+overflow:hidden;
+}
+
+.stars::before{
+content:"";
+position:absolute;
+width:200%;
+height:200%;
+background:radial-gradient(white 1px, transparent 1px);
+background-size:50px 50px;
+animation:move 20s linear infinite;
+opacity:0.2;
+}
+
+@keyframes move{
+from{transform:translateY(0)}
+to{transform:translateY(-500px)}
+}
+
+/* LOADER */
+.loader{
+position:fixed;
+width:100%;
+height:100vh;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+/* INTRO */
+.intro{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+/* CAKE */
+.cake{margin:30px;}
+.layer{width:200px;height:40px;margin:5px auto;border-radius:10px;}
+.l1{background:#ffb3c6}
+.l2{background:#ff5d8f}
+.l3{background:#c9184a}
+
+.flame{
+width:20px;height:20px;
+background:gold;
+border-radius:50%;
+animation:flicker .8s infinite;
+}
+
+@keyframes flicker{50%{transform:scale(1.3)}}
+
+/* GLASS CARD */
+.glass{
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(15px);
+padding:30px;
+margin:50px;
+border-radius:20px;
+text-align:center;
+}
+
+/* FLOWERS */
+.flowers::before{
+content:"🌸 🌹 🌺 🌷 💮";
+position:fixed;
+font-size:30px;
+animation:fall 10s linear infinite;
+}
+
+@keyframes fall{
+from{transform:translateY(-100%)}
+to{transform:translateY(100%)}
+}
+
+/* BUTTON */
+button,a{
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:white;
+color:#ff4f81;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
+}
+
+/* CARDS */
+.card{
+margin:20px;
+background:rgba(255,255,255,0.1);
+padding:15px;
+border-radius:15px;
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+/* FINAL */
+.final{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+flex-direction:column;
+text-align:center;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Locked ❤️</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+font-family:poppins;
+color:white;
+text-align:center;
+}
+
+.box{
+background:rgba(255,255,255,0.15);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+width:90%;
+max-width:350px;
+animation:fade 1s ease;
+}
+
+input{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+margin-top:15px;
+outline:none;
+text-align:center;
+font-size:16px;
+}
+
+button{
+margin-top:15px;
+padding:12px 20px;
+border:none;
+border-radius:25px;
+background:white;
+color:#ff4f81;
+font-weight:bold;
+cursor:pointer;
+width:100%;
+}
+
+.error{
+color:yellow;
+margin-top:10px;
+display:none;
+}
+
+@keyframes fade{
+from{opacity:0;transform:scale(0.8)}
+to{opacity:1;transform:scale(1)}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>🔐 Enter Password</h2>
+<p>Only my love can enter ❤️</p>
+
+<input type="password" id="pass" placeholder="Enter secret code">
+
+<button onclick="check()">Unlock ❤️</button>
+
+<p class="error" id="error">Wrong password 😢</p>
+
+</div>
+
+<script>
+
+function check(){
+
+let pass = document.getElementById("pass").value;
+
+// ❤️ CHANGE YOUR PASSWORD HERE
+if(pass === "iloveyou"){
+
+window.location.href="home.html";
+
+}else{
+
+document.getElementById("error").style.display="block";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
